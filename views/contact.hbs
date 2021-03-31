@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Информационная страничка</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Информационная страничка</h1>
+    <p></p>
+    <table>
+        <tr>
+            <td>
+                <h3>Запущенные процессы:</h3>
+            </td>
+            <td>
+                <h3>Статистика нагрузки сервера:</h3>
+            </td>
+            <td>
+                <h3>Состояние сервера:</h3>
+            </td>
+        </tr>
+         <tr>
+            <td>
+              
+                <ul>
+                    {{#each proc}}
+                    <li>{{this.name}}</li>
+                    {{/each}}
+                </ul>
+         
+            </td>
+            <td>
+                ЦП {{load}}%<br>
+                Память {{mem.used}}/{{mem.total}}байт
+            </td>
+            <td>
+                <h3>Состояние сервера:</h3>
+            </td>
+        </tr>
+    </table>
+</body>
+<html>
